@@ -1,5 +1,7 @@
 # broken msg: “Mostre seu conhecimento em análise de pacotes e encontre a flag”
 
+> https://shellterlabs.com/en/questions/arahacker-day-2017/broken-msg/
+
 O desafio nos fornece um arquivo com a extensão pcapng, vamos conferir:
 ```shell
 $ file net.pcapng
