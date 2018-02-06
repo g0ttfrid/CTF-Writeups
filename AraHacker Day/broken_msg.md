@@ -30,3 +30,8 @@ ON4Q====
 $ echo "NYZXI5ZQOJVV6MZUON4Q====" | base32 -d
 *******_****
 ```
+
+Sites:
+https://shellterlabs.com
+https://www.wireshark.org/
+https://github.com/simsong/tcpflow
