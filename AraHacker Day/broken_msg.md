@@ -2,15 +2,17 @@
 
 > https://shellterlabs.com/en/questions/arahacker-day-2017/broken-msg/
 
-O desafio nos fornece um arquivo com a extensão pcapng, vamos conferir:
+O desafio fornece um arquivo com a extensão pcapng, vamos conferir:
 ```shell
 $ file net.pcapng
 net.pcapng: pcap-ng capture file – version 1.0
 ```
 
-Abri o arquivo com o wireshark, ao analisar os primeiros pacotes TCP com 'tcp follow' encontramos uma trollagem. Extraio o conteúdo do pcap com o tcpflow para verificar todos os dados que o tcpflow consiga extrair:
+Abri o arquivo com o wireshark, e inicialmente procuro dados legíveis. Com uma rápida análise, encontro alguns segmentos TCP com dados legíveis que podem ser lidos com a opção ¨tcp follow¨ do wireshark, que nada mais é que uma trollagem. Continuando a análise encontro o que parece ser algo cifrado.
+
+Extraio o conteúdo do pcapng usando o tcpflow: 
 ```shell
-tcpflow -r net.pcapng
+$ tcpflow -r net.pcapng
 ```
 
 Ao exibir o conteúdo dos arquivos encontramos a trollagem e o que parece ser três pedaços de um hash, juntando e decodando em base32 obtenho a flag.
@@ -28,6 +30,3 @@ ON4Q====
 $ echo "NYZXI5ZQOJVV6MZUON4Q====" | base32 -d
 *******_****
 ```
-
-
-Obrigado!
