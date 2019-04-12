@@ -8,7 +8,7 @@ $ file net.pcapng
 net.pcapng: pcap-ng capture file – version 1.0
 ```
 
-Abri o arquivo com o wireshark, e inicialmente procuro dados legíveis. Com uma rápida análise, encontro alguns segmentos TCP com dados legíveis que podem ser lidos com a opção ¨tcp follow¨ do wireshark, que nada mais é que uma trollagem. Continuando a análise encontro o que parece ser algo cifrado.
+Abri o arquivo com o wireshark, e inicialmente procuro dados legíveis. Com uma rápida análise, encontro alguns segmentos TCP com dados legíveis que podem ser lidos com a opção ¨tcp follow¨ do wireshark, que nada mais é que uma trollagem. Continuando a análise encontro o que parece ser algo encodado.
 
 Extraio o conteúdo do pcapng usando o tcpflow: 
 ```shell
