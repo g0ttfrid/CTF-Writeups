@@ -43,7 +43,7 @@ namespace Marmalade_5
                     if (sign == "3R1XbK5O2t6MZ0ir6KJdRw")
                     {
                         // var secret = "fsrwjcfszegvsyfa";
-                        Console.WriteLine($"[+] secret >> {secret}");
+                        Console.WriteLine($"[+] secret: {secret}");
 
                         // Payload = {"username": "admin"} = eyJ1c2VybmFtZSI6ImFkbWluIn0
                         hPayload = "eyJhbGciOiJNRDVfSE1BQyJ9.eyJ1c2VybmFtZSI6ImFkbWluIn0";
